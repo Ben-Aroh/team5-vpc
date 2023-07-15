@@ -126,3 +126,12 @@ resource "aws_subnet" "private-subnet-4" {
     Name    = "Private Subnet 4 | Database Tier By Ben Aroh"
   }
 }
+
+resource "aws_instance" "web" {
+  ami           = "ami-0507f77897697c4ba"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "AnotherTesting terraform run"
+  }
+}
