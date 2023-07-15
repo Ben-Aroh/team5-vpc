@@ -6,7 +6,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames    = true
 
   tags      = {
-    Name    = "Test VPC By Ben Aroh"
+    Name    = "Test VPC"
   }
 }
 
@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "internet-gateway" {
   vpc_id    = aws_vpc.vpc.id
 
   tags      = {
-    Name    = "Test IGW By Ben Aroh "
+    Name    = "Test IGW"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "public-subnet-1" {
   map_public_ip_on_launch = true
 
   tags      = {
-    Name    = "Public Subnet 1 By Ben Aroh"
+    Name    = "Public Subnet 1"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_subnet" "public-subnet-2" {
   map_public_ip_on_launch = true
 
   tags      = {
-    Name    = "Public Subnet 2 By Ben Aroh"
+    Name    = "Public Subnet 2"
   }
 }
 
@@ -57,7 +57,7 @@ resource "aws_route_table" "public-route-table" {
   }
 
   tags       = {
-    Name     = "Public Route Table By Ben Aroh "
+    Name     = "Public Route Table"
   }
 }
 
@@ -84,7 +84,7 @@ resource "aws_subnet" "private-subnet-1" {
   map_public_ip_on_launch  = false
 
   tags      = {
-    Name    = "Private Subnet 1 | App Tier By Ben Aroh"
+    Name    = "Private Subnet 1 | App Tier"
   }
 }
 
@@ -97,7 +97,7 @@ resource "aws_subnet" "private-subnet-2" {
   map_public_ip_on_launch  = false
 
   tags      = {
-    Name    = "Private Subnet 2 | App Tier By Ben Aroh"
+    Name    = "Private Subnet 2 | App Tier"
   }
 }
 
@@ -110,7 +110,7 @@ resource "aws_subnet" "private-subnet-3" {
   map_public_ip_on_launch  = false
 
   tags      = {
-    Name    = "Private Subnet 3 | Database Tier By Ben Aroh"
+    Name    = "Private Subnet 3 | Database Tier"
   }
 }
 
@@ -123,6 +123,6 @@ resource "aws_subnet" "private-subnet-4" {
   map_public_ip_on_launch  = false
 
   tags      = {
-    Name    = "Private Subnet 4 | Database Tier By Ben Aroh"
+    Name    = "Private Subnet 4 | Database Tier"
   }
 }
