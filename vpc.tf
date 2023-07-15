@@ -128,8 +128,9 @@ resource "aws_subnet" "private-subnet-4" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0507f77897697c4ba"
+  ami           = "ami-0ae49954dfb447966"
   instance_type = "t3.micro"
+  count = 3
 
   tags = {
     Name = "AnotherTesting terraform run"
